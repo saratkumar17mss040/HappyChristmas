@@ -1,5 +1,4 @@
-# TODO  
-
+# TODO 
     - [x] Try to use animate.css  
     - [x] Create a switch to turn on/off the lights  
     - [x] Create lights around the page  
@@ -7,7 +6,7 @@
     - [x] Animate 'Happy christmas' when switched on  
     - [x] Include creative emoji's  
 
-## Strecth 
+## Stretch 
  
     - [ ] Include crackers/blasts!
     - [ ] Include santaclaus using css animation!
