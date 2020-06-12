@@ -1,17 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
-
 :root{
-    font-size: 16px;
+    font-size: 28px;
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
 }
 
 body {
     font-family: 'Poppins';
     margin: 0;
     padding: 0;
+    width: 100%;
+    position: absolute;
+    /* background: linear-gradient(#1A76BE,#0063B1); */
+    background-color: brown;
+    background-image: url('resources/snow1.png'), url('resources/snow2.png'), url('resources/snow3.png');	
+	animation: snow 20s linear infinite;
+}
+
+
+@keyframes snow {
+    0% {
+        background-position: 2px 2px, 4px 4px, 4px 4px;
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
 }
 
 #main-container {
-    background-color: brown;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,16 +35,187 @@ body {
 
 button {
     font-family: 'Poppins';
-    display: inline-flex;
-    background-color: #4CAF50; /* Green */
+    font-weight: 600;
+    display: flex;
+    /* Green */
     border: none;
-    color: white;
-    padding: 15px 32px;
+    padding: 25px 62px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 28px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 30px;
+    color: #4CAF50;
+    background-color: #ffffff;
+    border: 3px solid #ffffff;
 }
+
+button:hover {
+    background-color: lightgreen;
+    color: #000000;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    bottom: -100px;
+    right: 250px;
+  }
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+ span.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  span.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: green;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #4CAF50;
+  }
+  
+  input:checked + span.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  span.slider.round {
+    border-radius: 34px;
+  }
+
+  span.slider.round:before {
+    border-radius: 50%;
+  }
+
+  p {
+    font-style: italic;
+    position: absolute;
+    display: block;
+    width: 290px;
+    margin: 4px 2px;
+    text-align: center;
+    left: -105px;
+    bottom: -75px;
+    color: khaki;
+  }
+
+
+  .box{
+    width:4%;
+    height:4%;
+    position:absolute;
+    top:1%;
+    left:3%;
+    }
+    .box span{
+    width:20px;
+    height:20px;
+    display:block;
+    /*background:red;*/
+    border-radius:50%;
+    padding:2%;
+    margin-top:30%;
+    /*animation:glow 1.4s linear infinite;*/
+    }
+    /*
+    @keyframes glow{
+    0%{
+    background:red;
+    box-shadow:0 1px 2px 1px red;
+    }
+    90%{
+    background:green;
+    box-shadow:0 1px 2px 1px green;
+    }
+    100%{
+    background:blue;
+    box-shadow:0 1px 2px 1px blue;
+    }
+    }*/
+
+    .box1{
+        position:absolute;
+        top:1%;
+        left:90%;
+        }
+    
+    
+    span:nth-child(odd){
+    animation:glow 1.4s linear infinite;
+    }
+    @keyframes glow{
+    0%{
+    background:red;
+    box-shadow:1px 1px 2px 1px red;
+    }
+    50%{
+    background:green;
+    box-shadow:1px 1px 2px 1px green;
+    }
+    100%{
+    background:blue;
+    box-shadow:1px 1px 2px 1px blue;
+    }
+    }
+    span:nth-child(even){
+    animation:glow1 1.4s linear infinite;
+    }
+    @keyframes glow1{
+    0%{
+    background:red;
+    box-shadow:1px 1px 2px 1px red;
+    }
+    20%{
+    background:lime;
+    box-shadow:1px 1px 2px 1px lime;
+    }
+    40%{
+    background:#ff0;
+    box-shadow:1px 1px 2px 1px #ff0;
+    }
+    50%{
+    background:green;
+    box-shadow:1px 1px 2px 1px green;
+    }
+    80%{
+    background:rgb(255,0,255);
+    box-shadow:1px 1px 2px 1px rgb(255,0,255);
+    }
+    100%{
+    background:blue;
+    box-shadow:1px 1px 2px 1px blue;
+    }
+    }
+
