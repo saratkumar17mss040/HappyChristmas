@@ -11,10 +11,15 @@ body {
   width: 100%;
   position: absolute;
   /* background: linear-gradient(#1A76BE,#0063B1); */
-  background-color: brown;
+  /* background-color: brown; */
+  background: #01a9b4;
   background-image: url('resources/snow1.png'), url('resources/snow2.png'),
     url('resources/snow3.png');
   animation: snow 20s linear infinite;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 @keyframes snow {
@@ -28,6 +33,7 @@ body {
 
 #main-container {
   display: flex;
+  justify-items: center;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -44,21 +50,21 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 28px;
-  margin: 4px 2px;
+  /* margin: 4px 2px; */
   cursor: pointer;
   border-radius: 30px;
-  color: #4caf50;
+  color: brown;
   background-color: #ffffff;
   border: 3px solid #ffffff;
   /* //unneccessary css */
-  margin-left: 450px;
-  margin-top: 200px;
+  /* margin-left: 450px;
+  margin-top: 200px; */
 }
 
 
 button:hover {
-  background-color: lightgreen;
-  color: #000000;
+  background-color: #9f1e29;
+  color: #ffffff;
 }
 
 .switch {
@@ -83,7 +89,7 @@ span.slider.round {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(54, 172, 250);
+  background-color: blue;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   animation: none;
@@ -102,7 +108,7 @@ span.slider:before {
 }
 
 input:checked + .slider {
-  background-color: green;
+  background-color: #9f1e29;
 }
 
 input:focus + .slider {
@@ -148,13 +154,13 @@ p {
 
 div.box.box-left {
   position: absolute;
-  top: 1%;
+  top: -300%;
   left: 12%;
 }
 
 .box-right {
   position: absolute;
-  top: 1%;
+  top: -300%;
   right: 8%;
 }
 
@@ -184,7 +190,7 @@ span:nth-child(odd) {
     box-shadow: 1px 1px 2px 1px purple;
   }
   50% {
-    background: green;
+    background: lightcoral;
     box-shadow: 1px 1px 2px 1px green;
   }
   100% {
@@ -209,7 +215,7 @@ span:nth-child(even) {
     box-shadow: 1px 1px 2px 1px #ff0;
   }
   50% {
-    background: green;
+    background: lightcoral;
     box-shadow: 1px 1px 2px 1px green;
   }
   80% {
@@ -220,4 +226,14 @@ span:nth-child(even) {
     background: blue;
     box-shadow: 1px 1px 2px 1px blue;
   }
+}
+
+
+#santa-gif {
+ position: absolute;
+ margin: 0 auto;
+ /* margin:0 auto; */
+ margin-top: -300px;
+ margin-left: 440px;
+ display: none;
 }

@@ -3,10 +3,9 @@
 - [x] Create a switch to turn on/off the lights  
 - [x] Create lights around the page  
 - [x] Create different colour of lights  
-- [x] Animate 'Happy christmas' when switched on  
-- [x] Include creative emoji's  
+- [x] Add in a gif image when 'Happy christmas' button is clicked on    
 
 ## Stretch  
 - [ ] Include crackers/blasts!
 - [ ] Include santaclaus using css animation!
-- [ ] Generate gift boxes when clicked santa!
+- [ ] Generate gift boxes when clicked on santaclaus!
